@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #333;
+    --background-color: #fff;
+    --text-color: #333;
+    --button-bg: #007bff;
+    --button-color: #fff;
+}
+
+body.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #fff;
+    --primary-color: #fff;
+    --button-bg: #6c757d;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.quote-container {
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    min-height: 150px;
+}
+
+#quote-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: font-size 0.3s;
+}
+
+#quote-author {
+    font-style: italic;
+    color: #666;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.font-controls {
+    text-align: center;
+}
+
+.theme-toggle label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+    }
+
+    button {
+        flex-grow: 1;
+    }
+
+    #quote-text {
+        font-size: 20px;
+    }
+}
